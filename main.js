@@ -27,25 +27,31 @@ function my_keydown(e) {
 
 	if ((keyPressed >= 97 && keyPressed <= 122) || (keyPressed >= 65 && keyPressed <= 90)) {
 		aplhabetkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or Aplhabet key";
+		document.getElementById("d1").innerHTML = "You pressed Aplhabet key";
 		console.log("aplhabet key");
-
+	}
+	else if(keyPressed >= 48 && keyPressed <= 57) {
 		numberkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or Number key";
+		document.getElementById("d1").innerHTML = "You pressed Number key";
 		console.log("number key");
-
+	}
+		
+    else if(keyPressed >= 37 && keyPressed <= 40) {
 		arrowkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or Arrow key";
-		console.log("number key");
-
+		document.getElementById("d1").innerHTML = "You pressed Arrow key";
+		console.log("arrow key");
+	}
+	else if((keyPressed == 17)|| (keyPressed == 18 || keyPressed == 27)) {
 		specialkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or Special key";
-		console.log("number key");
+		document.getElementById("d1").innerHTML = "You pressed ctrl/esc/alt key";
+		console.log("special key");
+	}
 
-        otherkey();
-		document.getElementById("d1").innerHTML = "You pressed symbol or Other key";
-		console.log("other key");
-	}	
+	else {
+			otherkey();
+			document.getElementById("d1").innerHTML = "You pressed symbol or other key";
+    }
+
 
 	function aplhabetkey() {
 		img_image = "Alpkey.png";
